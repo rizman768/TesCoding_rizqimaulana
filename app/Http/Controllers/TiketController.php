@@ -12,7 +12,7 @@ class TiketController extends Controller
     }
 
     public function tiket(){
-        $tiket = Tiket::first();
+        $tiket = Tiket::orderBy('id', 'DESC')->first();
         return view('tiket.tiket', compact('tiket'));
     }
 
